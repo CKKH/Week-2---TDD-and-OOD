@@ -1,5 +1,3 @@
-# require 'note'
-
 describe 'User Stories' do
 
   # As an office worker
@@ -10,6 +8,16 @@ describe 'User Stories' do
     note = Note.new
     information = 'Shopping'
     expect { note.write(information) }.not_to raise_error
+  end
+
+  # As an office worker
+  # So I can carry all my useful information
+  # I want to keep all my notes in a notebook
+
+  it 'so notes can be carried, keep them in a note book' do
+    note = Note.new
+    notebook = Notebook.new
+    expect { notebook.save(note) }.not_to raise_error
   end
 
 end
